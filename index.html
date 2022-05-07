@@ -2,19 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!--  <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
     <link rel="stylesheet" href="./sass/pages/_home.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <h1>dsa</h1>
+
+    <meta
+      name="Description"
+      content="Christian Predoianu - Front end developer based in Sweden. Portfolio site. "
+    />
+    <title>
+      Christian Predoianu | Front-end developer based in Sweden | Portfolio
+    </title>
+
+    <!--  Social Media META Tags -->
+    <meta
+      property="og:title"
+      content="Christian Predoianu - Front end developer based in Sweden. "
+    />
+    <meta
+      property="og:description"
+      content="Christian Predoianu - Portfolio site"
+    />
+    <meta property="og:image" content="assets/images/briefcase.jpg" />
+    <meta property="og:url" content="http://christianpredoianu.com" />
+
+    <!--  Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon-16x16.png"
+      sizes="16x16"
+    />
   </head>
   <body>
+    <header class="container">
+      <nav class="nav">
+        <div class="logo">
+          <a href="index.html"
+            ><p class="logo__heading">Christian Predoianu</p>
+          </a>
+        </div>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" class="theme-switch__input" />
+            <div class="slider round"></div>
+          </label>
+          <p class="theme-switch-wrapper__paragraph">Dark Mode</p>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </div>
+        <ul class="nav-links" role="list" id="nav-links">
+          <li class="nav-links__link"><a href="index.html">Home</a></li>
+          <li class="nav-links__link"><a href="projects.html">Projects</a></li>
+          <li class="nav-links__link"><a href="about.html">About me</a></li>
+          <li class="nav-links__link"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
