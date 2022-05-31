@@ -1,5 +1,10 @@
 @use '../abstracts/' as *;
 
+.nav {
+  @include flex-config($justify: space-between, $align: center);
+  height: 10vh;
+}
+
 .logo {
   &__heading {
     font-size: clamp(1.2rem, 1vw, 3rem);
@@ -16,11 +21,6 @@
       width: 100%;
     }
   }
-}
-
-.nav {
-  @include flex-config($justify: space-between, $align: center);
-  padding: 2rem 0;
 }
 
 .theme-switch-wrapper {
@@ -78,6 +78,7 @@
 
 .hamburger {
   z-index: 20;
+  cursor: pointer;
 
   @include respond(md) {
     display: none;
@@ -104,20 +105,18 @@
   width: 100vw;
   z-index: 5;
   display: none;
+  color: white;
 
   @include respond(md) {
     @include flex-config($direction: row);
     position: initial;
     height: auto;
     width: 50%;
+    color: black;
   }
 
   &__link {
     font-size: 2rem;
-
-    & a {
-      color: orange;
-    }
   }
 }
 

@@ -1,1 +1,50 @@
-@use '../main' as *;
+@use '../abstracts/' as *;
+@use '../main.scss' as *;
+
+main {
+  position: relative;
+  min-height: 90vh;
+  color: var(--clr-light-gray);
+}
+
+.welcome-section {
+  @include flex-config($direction: column, $align: center);
+  background-color: rgb(38, 39, 43);
+  padding: 10rem 1rem;
+}
+
+.headings-wrapper {
+  position: relative;
+  &:after {
+    @include pseudo($top: 0, $right: 0);
+    border-top: 7px solid;
+    background-color: linear-gradient(
+        to right,
+        rgb(240, 240, 240),
+        rgb(112, 112, 151) 100%
+      )
+      1 100%;
+
+    width: 100%;
+    z-index: 50;
+  }
+
+  &__secondary-heading {
+    font-size: clamp(1.5rem, 1vw, 10rem);
+    letter-spacing: 0.5rem;
+  }
+
+  &__primary-heading {
+    font-size: clamp(2.5rem, 2vw + 1rem, 7rem);
+  }
+
+  &__primary-heading-span {
+    display: block;
+  }
+}
+
+.profile-img {
+  @include position($pos: absolute, $left: -1rem, $bottom: 0);
+  width: 15%;
+  filter: brightness(0.6) drop-shadow(16px 16px 20px rgb(150, 150, 150));
+}

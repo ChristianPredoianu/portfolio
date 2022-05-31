@@ -1,3 +1,7 @@
 :root {
-  --clr-dark: rgb(41, 40, 40);
+  --clr-dark: #292828;
+  --clr-light-gray: #e2e2e2;
+
+  --fs-primaryHeading: clamp(1.8rem, 2vw, 2.5rem);
+  --fs-secondaryHeading: clamp(1.5rem, 2vw, 2rem);
 }

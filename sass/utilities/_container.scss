@@ -7,6 +7,7 @@
 
   @include respond(sm) {
     max-width: 64rem;
+    padding: 0 3rem;
   }
 
   @include respond(md) {
